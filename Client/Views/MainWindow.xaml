@@ -1,0 +1,72 @@
+﻿<Window x:Class="Client.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" WindowStyle="None" AllowsTransparency="True"
+        xmlns:local="clr-namespace:Client"
+        xmlns:vm="clr-namespace:Client.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000">
+
+    <!--<Window.DataContext>
+        <vm:ApplicationViewModel/>
+    </Window.DataContext>-->
+
+<DockPanel>
+        <DockPanel DockPanel.Dock="Left">
+           
+            <ListView x:Name="ListViewMenu" DockPanel.Dock="Top" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged" 
+                   FontSize="16" SelectedIndex="0" MouseEnter="ListViewMenu_MouseEnter" MouseLeave="ListViewMenu_MouseLeave" Background="Red" >
+
+                <ListViewItem x:Name="clients" Height="60" > <!--ToolTip="Клиенты"-->
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AccountBox" Height="25" Width="33" Margin="10" />
+                        <TextBlock x:Name="t1" Text="Клиенты" VerticalAlignment="Center" Margin="20 10" Visibility="Collapsed"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="projects" Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Pencil" Height="25" Width="33" Margin="10"/>
+                        <TextBlock x:Name="t2" Text="Проекты" VerticalAlignment="Center" Margin="20 10" Visibility="Collapsed"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="payment" Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AccountBalanceWallet" Height="25" Width="33" Margin="10"/>
+                        <TextBlock x:Name="t3" Text="Оплаты" VerticalAlignment="Center"  Margin="20 10" Visibility="Collapsed"/>
+                    </StackPanel>
+                </ListViewItem>
+               
+            </ListView>
+        </DockPanel>
+
+        <Grid x:Name="GridTop" Height="60" DockPanel.Dock="Top" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Grid.Background>
+                <SolidColorBrush Color="Blue" Opacity="0.6" />
+            </Grid.Background>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Меню" VerticalAlignment="Center" FontSize="16" />
+                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" >
+                    <StackPanel Width="150" Background="AliceBlue">
+                        <Button Content="Настройки" />
+                        <Button Content="Справка"/>
+                        <Separator />
+                        <Button Content="Свернуть" x:Name="hide_btn" Click="Hide_btn_Click" />
+                        <Button Content="Выход" x:Name="close_btn" Click="close_btn_Click" />
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Billing</TextBlock>
+        </Grid>
+        
+        <Grid x:Name="GridMain">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF5C99D6" Opacity="0.7"/>
+            </Grid.Background>
+            
+        </Grid>
+        
+    </DockPanel>
+</Window>

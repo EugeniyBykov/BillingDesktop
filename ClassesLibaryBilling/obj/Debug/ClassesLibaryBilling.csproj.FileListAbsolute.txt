@@ -1,0 +1,6 @@
+C:\Users\Евгений\Новая папка\Desktop\Курсовой Проект .Net\Billing\ClassesLibaryBilling\bin\Debug\ClassesLibaryBilling.dll
+C:\Users\Евгений\Новая папка\Desktop\Курсовой Проект .Net\Billing\ClassesLibaryBilling\bin\Debug\ClassesLibaryBilling.pdb
+C:\Users\Евгений\Новая папка\Desktop\Курсовой Проект .Net\Billing\ClassesLibaryBilling\obj\Debug\ClassesLibaryBilling.dll
+C:\Users\Евгений\Новая папка\Desktop\Курсовой Проект .Net\Billing\ClassesLibaryBilling\obj\Debug\ClassesLibaryBilling.pdb
+C:\Users\Евгений\Новая папка\Desktop\Курсовой Проект .Net\Billing\ClassesLibaryBilling\obj\Debug\ClassesLibaryBilling.csprojAssemblyReference.cache
+C:\Users\Евгений\Новая папка\Desktop\Курсовой Проект .Net\Billing\ClassesLibaryBilling\obj\Debug\ClassesLibaryBilling.csproj.CoreCompileInputs.cache
